@@ -25,6 +25,7 @@ generate-note-api:
     --plugin=protoc-gen-go-grpc=bin/protoc-gen-go-grpc \
     api/chat_v1/chat.proto
 
+
 build:
 	GOOS=linux GOARCH=amd64 go build -o service_linux cmd/main.go
 
