@@ -1,0 +1,7 @@
+/chat_server/chat_api/protobuf
+/chat_server/chat_api/.env
+
+/auth/user_api/protobuf
+/auth/user_api/.env
+
+/chat_server/chat_api/.database/postgres/data/

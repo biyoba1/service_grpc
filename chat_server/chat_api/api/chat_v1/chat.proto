@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package chat_v1;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+option go_package = "valera/auth/user_api/pkg/chat_v1;chat_v1";
+
+service ChatAPI {
+  rpc Create(CreateRequest) returns (CreateResponse);
+  rpc Delete(DeleteRequest) returns (DeleteResponse);
+  rpc SendMessage(SendMessageRequest) returns (SendMessageResponse);
+}
+
+message CreateRequest {
+  repeated string usernames = 1;
+}
+
+message CreateResponse {
+  int64 id = 1;
+}
+
+message DeleteRequest {
+  int64 id = 1;
+}
+
+message DeleteResponse {
+  google.protobuf.Empty empty = 1;
+}
+
+message SendMessageRequest {
+  string from = 1;
+  string text = 2;
+  google.protobuf.Timestamp timestamp = 3;
+}
+
+message SendMessageResponse {
+  google.protobuf.Empty empty = 1;
+}
