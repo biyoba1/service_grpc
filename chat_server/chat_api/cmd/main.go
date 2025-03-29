@@ -64,6 +64,7 @@ func (s *server) Create(ctx context.Context, request *desc.CreateRequest) (*desc
 			Columns("usernames").
 			Values(username).
 			Suffix("RETURNING id")
+
 		query, args, err := builderInsert.ToSql()
 		if err != nil {
 			log.Println("failed to build query: %v", err)
