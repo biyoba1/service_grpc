@@ -4,7 +4,7 @@ COPY . /auth/user_api/source
 WORKDIR /auth/user_api/source
 
 RUN go mod download
-RUN go build -o ./bin/crud_server cmd/main.go
+RUN go build -o ./bin/user_server cmd/main.go
 
 FROM alpine:latest
 
