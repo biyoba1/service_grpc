@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: "cr.selcloud.ru/valera"
-  IMAGE_NAME: "crud-server"
+  IMAGE_NAME: "chat_server"
   CONTAINER_NAME: "crud-server-container"
 
 jobs:

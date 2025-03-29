@@ -11,4 +11,4 @@ FROM alpine:latest
 WORKDIR /root/
 COPY --from=builder /chat_server/chat_api/source/bin/crud_server .
 
-CMD ["./crud_server"]
+CMD ["./chat_server"]

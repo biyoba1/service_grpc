@@ -11,4 +11,4 @@ FROM alpine:latest
 WORKDIR /root/
 COPY --from=builder /auth/user_api/source/bin/crud_server .
 
-CMD ["./crud_server"]
+CMD ["./user_server"]

@@ -77,6 +77,7 @@ func (s *server) Create(ctx context.Context, request *desc.CreateRequest) (*desc
 
 		log.Printf("inserted username with id: %d", noteID)
 	}
+	fmt.Println("aloha!")
 	return &desc.CreateResponse{
 		Id: gofakeit.Int64(),
 	}, nil
