@@ -32,9 +32,9 @@ copy-to-server:
 	scp service_linux root@5.44.45.15:
 
 docker-build-and-push:
-	docker buildx build --no-cache --platform linux/amd64 --network=host -t cr.selcloud.ru/valera/test-server:v0.0.1 .
+	docker buildx build --no-cache --platform linux/amd64 --network=host -t cr.selcloud.ru/valera/chat_server:v0.0.1 .
 	docker login -u token -p CRgAAAAACouDtA82R6Fjq0mh1qBBgvkDxh46y5PJ cr.selcloud.ru/valera
-	docker push cr.selcloud.ru/valera/test-server:v0.0.1
+	docker push cr.selcloud.ru/valera/chat_server:v0.0.1
 
 local-migration-status:
 	goose -dir ${LOCAL_MIGRATION_DIR} postgres ${LOCAL_MIGRATION_DSN} status -v
