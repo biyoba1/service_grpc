@@ -9,6 +9,6 @@ RUN go build -o ./bin/chat_server cmd/main.go
 FROM alpine:latest
 
 WORKDIR /root/
-COPY --from=builder /chat_server/chat_api/source/bin/crud_server .
+COPY --from=builder /chat_server/chat_api/source/bin/chat_server .
 
 CMD ["./chat_server"]

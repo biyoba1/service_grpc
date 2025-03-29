@@ -9,6 +9,6 @@ RUN go build -o ./bin/user_server cmd/main.go
 FROM alpine:latest
 
 WORKDIR /root/
-COPY --from=builder /auth/user_api/source/bin/crud_server .
+COPY --from=builder /auth/user_api/source/bin/user_server .
 
 CMD ["./user_server"]
