@@ -5,3 +5,4 @@
 /auth/user_api/.env
 
 /chat_server/chat_api/.database/postgres/data/
+/auth/user_api/.database/postgres/data/
