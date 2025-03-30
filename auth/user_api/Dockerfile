@@ -10,5 +10,6 @@ FROM alpine:latest
 
 WORKDIR /root/
 COPY --from=builder /auth/user_api/source/bin/crud_server .
+COPY --from=builder /auth/user_api/source/.env ./.env
 
 CMD ["./crud_server"]
